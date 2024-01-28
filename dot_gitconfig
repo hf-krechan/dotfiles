@@ -1,0 +1,14 @@
+[user]
+	email = kevin.krechan@hochfrequenz.de
+	name = hf-krechan
+
+[url "ssh://git@github.com/enercity"]
+	insteadOf = https://github.com/enercity
+[init]
+	defaultBranch = main
+
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
