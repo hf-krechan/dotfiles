@@ -1,0 +1,21 @@
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# ssh agent
+ssh-add --apple-use-keychain ~/.ssh/github
+ssh-add --apple-use-keychain ~/.ssh/azure-bookstack
+
+# tox setup 
+path+=("${HOME}/bin")
+export PATH
+
+# psycopg setup 
+library_path+=("/usr/bin/openssl")
+export LIBRARY_PATH
+
+# Add .NET Core SDK tools
+export PATH="$PATH:/Users/kevin/.dotnet/tools"
+export DOTNET_ROOT="/usr/local/share/dotnet/x64"
+#export DOTNET_ROOT="/usr/local/share/dotnet/"
+
+# .NET 6
+export DOTNET_ROOT="/opt/homebrew/opt/dotnet/libexec"
